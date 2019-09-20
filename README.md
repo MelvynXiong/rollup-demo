@@ -1,0 +1,14 @@
+- npx rollup src/main.js -f cjs
+  - 指定输出代码的模块格式
+  - 因为没指定输出文件，直接打印标准输出
+- npx rollup src/main.js -o bundle.js -f cjs
+  - 输出文件 bundle.js
+- npx rollup -c
+  - 使用默认的配置文件进行打包
+- npx rollup -c -o bundle-2.js
+  - 命令行选项会覆盖配置文件
+- npx rollup --config rollup.config.dev.js
+  - 用另外的配置文件
+- npx rollup src/main.js -f cjs -d dist
+  - 输出文件到一个指定目录中
+  - 可通过 output.chunkFileNames, output.entryFileNames 改变输出文件的名字
